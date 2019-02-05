@@ -1,0 +1,2 @@
+
+Your account is {f:if(condition: {isApproved}, then: 'approved', else: 'declined')} by administrator.

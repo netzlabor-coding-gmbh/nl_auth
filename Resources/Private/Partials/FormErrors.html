@@ -1,0 +1,18 @@
+<f:form.validationResults for="{field}">
+    <f:if condition="{validationResults.flattenedErrors}">
+        <div class="m-alert m-alert--icon alert alert-danger m--margin-top-20" role="alert">
+            <div class="m-alert__icon  m--hidden-mobile">
+                <i class="flaticon-danger"></i>
+            </div>
+            <div class="m-alert__text m--align-center">
+                <f:for each="{validationResults.errors}" as="error">
+                    <f:format.raw><f:translate key="validation.error.{error.code}">{error}</f:translate></f:format.raw>
+                </f:for>
+            </div>
+            <div class="m-alert__close">
+                <button type="button" class="close" data-close="alert" aria-label="Hide">
+                </button>
+            </div>
+        </div>
+    </f:if>
+</f:form.validationResults>

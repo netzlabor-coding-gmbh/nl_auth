@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-12-07T13:07:48Z" product-name="nl_auth">
+		<header/>
+		<body>
+			<trans-unit id="tx_nl_auth_user.name">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_nl_auth_user.description">
+				<source>Frontend users management plugin</source>
+			</trans-unit>
+			<trans-unit id="tt_content.list_type.nlauth_user">
+                <source>Frontend users management plugin</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_general">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_login">
+                <source>Login</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_password_recovery">
+                <source>Password Recovery</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_registration">
+                <source>Registration</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_confirmation">
+                <source>Confirmation</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_approvement">
+                <source>Approvement</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_notifications">
+                <source>Notifications</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_redirect">
+                <source>Redirects</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_profile">
+                <source>Profile</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_password_recovery">
+                <source>Password Recovery</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.sheet_links">
+                <source>Links</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.show_forgot_password">
+                <source>Display Password Recovery Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.showRegistrationLink">
+                <source>Display Registration Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.showLoginLink">
+                <source>Display Login Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.enable_permalogin">
+                <source>Display Remember Login</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.show_logoutFormAfterLogin">
+                <source>Disable redirect after successful login, but display logout-form</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelectmode">
+                <source>FE group select mode:</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelectmode_showAll">
+                <source>Show all</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelectmode_showSelected">
+                <source>Show selected</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelectmode_DontShowSelected">
+                <source>Don't show selected</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelectmode_FromTS">
+                <source>(from Typoscript)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelection">
+                <source>FE group selection:</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.groupSelection_noGroup">
+                <source>no group</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode">
+                <source>Redirect Mode</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.0">
+                <source>Defined by Usergroup Record</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.1">
+                <source>Defined by User Record</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.2">
+                <source>After Login (TS or Flexform)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.3">
+                <source>After Logout (TS or Flexform)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.4">
+                <source>After Login Error (TS or Flexform)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.5">
+                <source>Defined by GET/POST Parameters</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.6">
+                <source>Defined by Referrer</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectMode.I.7">
+                <source>Defined by Domain Entries</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectFirstMethod">
+                <source>Use First Supported Mode from Selection</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectDisable">
+                <source>Disable Redirect</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageLogin">
+                <source>After Successful Login Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageLoginError">
+                <source>After Failed Login Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageLogout">
+                <source>After Logout Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageReset">
+                <source>After Successful Reset Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageConfirmation">
+                <source>After Confirmation Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageRegistration">
+                <source>After Successful Registration Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.template_file">
+                <source>Template File</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.user_storage">
+                <source>User Storage Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.please_choose">
+                <source>Please choose...</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.choose_view">
+                <source>Choose View</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.disabled">
+                <source>Disabled</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.enable_password_recovery">
+                <source>Enable Password Recovery</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.login_on_success_password_recovery">
+                <source>Login On Success</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.registrationFields">
+                <source>Available Fields (empty = all)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.overrideUserGroup">
+                <source>Registered User Usergroup</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.confirmation">
+                <source>Enable Confirmation by User</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.approvement">
+                <source>Enable Approvement by Admin</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.deletion">
+                <source>Enable User Profile Deletion</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.deletion_hard">
+                <source>Enable Hard Delete</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.deletion_notifyAdmin">
+                <source>Notify Admin</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.adminNotification">
+                <source>Enable Admin Notification</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.adminMailList">
+                <source>Admin Mail List (comma separated)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.notifications.welcome">
+                <source>Send Welcome Message to User</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.notifications.approve">
+                <source>Send Approve Status Message to User</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.loginOnSuccess">
+                <source>Login On Success</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.assignGroup">
+                <source>Assign Group by Approvement</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.multiple">
+                <source>Multiple assignment</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.availableGroups">
+                <source>Available Groups to Assign (empty = all)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.declineGroup">
+                <source>Add Group to Decline Registration</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.passwordRecoveryPage">
+                <source>Password Recovery Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.registrationPage">
+                <source>Registration Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.loginPage">
+                <source>Login Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.takeEmailAsUsername">
+                <source>Take Email as Username</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_redirectPid">
+                <source>Redirect at Login to Page (tx_nlauth_user)</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_confirmedAt">
+                <source>Confirmed At (tx_nlauth_user)</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_approvedAt">
+                <source>Approved At (tx_nlauth_user)</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_declinedAt">
+                <source>Declined At (tx_nlauth_user)</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.username">
+                <source>Username</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.password">
+                <source>Password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.usergroup">
+                <source>Usergroup</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.firstName">
+                <source>Firstname</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.middleName">
+                <source>Middlename</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.lastName">
+                <source>Lastname</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.telephone">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.fax">
+                <source>Fax</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.zip">
+                <source>ZIP</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.city">
+                <source>City</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.country">
+                <source>Country</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.www">
+                <source>Website</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.company">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.lastlogin">
+                <source>Last login</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,21 @@
+<f:form.validationResults for="{objectName}.{property}">
+    <div class="form-group {f:if(condition: validationResults.errors, then: 'has-feedback has-error')}">
+        <label for="tx-nl-auth-user-{property}-field">{label}</label>
+        <div class="select">
+            <f:form.select
+                    property="{property}"
+                    value="{value}"
+                    options="{options}"
+                    prependOptionLabel="{prependOptionLabel}"
+                    prependOptionValue="{prependOptionValue}"
+                    id="tx-nl-auth-user-{property}-field"
+                    title="{validationResults.errors.0}"
+                    class="form-control"
+                    additionalAttributes="{additionalAttributes}"/>
+        </div>
+        <f:if condition="{validationResults.errors}">
+            <i class="form-control-feedback iconsimple iconsimple-times hidden-xs" data-sv-icon-for="{property}"></i>
+            <small class="help-block" data-sv-for="{property}">{validationResults.errors.0.message}</small>
+        </f:if>
+    </div>
+</f:form.validationResults>

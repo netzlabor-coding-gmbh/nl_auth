@@ -1,0 +1,35 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<div>
+    <p>Account: "<b>{user.username}</b>"</p>
+
+    <p>User data:</p>
+    <ul>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.username">Username</f:translate>: {user.username}</li>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.firstName">First Name</f:translate>: {user.firstName}</li>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.lastName">Last Name</f:translate>: {user.lastName}</li>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.company">Company</f:translate>: {user.company}</li>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.www">Website</f:translate>: {user.www}</li>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.title">Title</f:translate>: {user.title}</li>
+        <li><f:translate key="tx_nlauth_user_domain_model_user.country">Country</f:translate>: {user.country}</li>
+    </ul>
+
+    <p>Approve by link:</p>
+
+    <ul>
+        <f:for each="{hashUris}" as="hash" key="label">
+            <f:if condition="{label} != {settings.registration.approvement.declineGroup}">
+                <f:then>
+                    <li><a href="{hash}">{label}</a></li>
+                </f:then>
+            </f:if>
+        </f:for>
+    </ul>
+
+    <f:if condition="{settings.registration.approvement.declineGroup}">
+        <f:then>
+            <p>Or decline by link:</p>
+            <a href="{v:variable.get(name: 'hashUris.{settings.registration.approvement.declineGroup}', useRawKeys: 1)}">Decline</a>
+        </f:then>
+    </f:if>
+</div>

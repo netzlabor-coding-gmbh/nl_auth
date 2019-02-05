@@ -1,0 +1,18 @@
+<f:form.validationResults for="{property}">
+    <div class="form-group {f:if(condition: validationResults.errors, then: 'has-error has-feedback')}">
+        <label class="sr-only" for="tx-nl-auth-user-{property}-field">
+            <f:translate key="{translationKey}">{defaultLabel}</f:translate>
+        </label>
+        <f:form.textarea
+                property="{property}"
+                value="{value}"
+                id="tx-nl-auth-user-{property}-field"
+                placeholder="{f:translate(key: '{translationKey}', default: '{defaultLabel}')}"
+                title="{validationResults.errors.0}"
+                class="form-control"
+                additionalAttributes="{additionalAttributes}"/>
+        <f:if condition="{validationResults.errors}">
+            <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+        </f:if>
+    </div>
+</f:form.validationResults>

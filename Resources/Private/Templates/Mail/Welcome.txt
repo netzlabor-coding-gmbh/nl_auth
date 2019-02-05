@@ -1,0 +1,5 @@
+Dear {user.username},
+
+Thank you for signing up on our website. Your account has been created.
+
+Your website team.

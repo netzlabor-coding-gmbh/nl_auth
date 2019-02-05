@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-12-07T13:07:48Z" product-name="nl_auth">
+		<header/>
+		<body>
+			<trans-unit id="tx_nlauth_user.login_title">
+                <source>Login</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.password_request_reset_title">
+                <source>Reset Password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.login_label">
+                <source>Login</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.username_label">
+                <source>Username</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.email_label">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.username_or_email_label">
+                <source>Username or email address</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.password_label">
+                <source>Password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.password_repeat_label">
+                <source>Repeat password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.remember_label">
+                <source>Remember Me</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.login_submit">
+                <source>Login</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.password_request_reset_submit">
+                <source>Reset Password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.password_reset_submit">
+                <source>Change password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.registration_title">
+                <source>Registration</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.registration_submit">
+                <source>Sign up</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.password_forgot">
+                <source>Forgot password?</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.back_to_login_action">
+                <source>Back to login</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.login_success_title">
+                <source>Login successful</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.login_success_message">
+                <source>You are now logged in as '%s'</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.login_failed_title">
+                <source>Login failure</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.login_failed_message">
+                <source>An error occurred during login. Most likely you didn't enter the username or password correctly. Be certain that you enter them precisely as they are, including upper/lower case. Another possibility is that cookies might be disabled in your web browser.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.logout_success_title">
+                <source>You have logged out.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.logout_success_message">
+                <source>You just logged out from your user session on this website. You can login again or as another user by the form below.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.logout_submit">
+                <source>Logout</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.logged_user">
+                <source>Username:</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.no_password_error">
+                <source>This account currently has no password, you have most likely not completed registration yet or are supposed to authenticate in some other way.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.no_email_error">
+                <source>This account currently has no email address, please make sure to set it in your account.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_started">
+                <source><![CDATA[<h5>Es wurde eine E-Mail mit einem Link zum Zurücksetzen des Passworts an Ihre Emailadresse verschickt.</h5>Sollten Sie keine E-Mail erhalten, prüfen Sie bitte Ihren Spam-Ordner. Andernfalls wurde Ihr Benutzername oder die E-Mail-Adresse nicht gefunden.]]></source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_started_error">
+                <source><![CDATA[<h5>Etwas ist schief gelaufen!</h5>Fehler beim Senden einer E-Mail zum Zurücksetzen Ihres Kennworts. Bitte versuchen Sie es später erneut oder wenden Sie sich an den Site-Administrator.]]></source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_request_reset">
+                <source>Please enter the username or email of your account, a mail for resetting your password will be sent immediately to your email address.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_invalid">
+                <source>Invalid password reset request, please try again. Make sure you follow the steps from the password reset mail or start the reset process again.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_expired">
+                <source>Your password reset request has expired, please start the reset process again.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_completed">
+                <source><![CDATA[<h1 class="segoeprint brown">Passwort wurde geändert!</h1>Sie können sich jetzt mit Ihrem Benutzernamen oder Ihrer E-Mail-Adresse und Ihrem neuen Passwort anmelden.]]></source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_loggedin">
+                <source>You have successfully changed your password and have been logged in automatically.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.password_reset_hints">
+                <source>Please enter your password twice.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.confirmation_invalid">
+                <source>Invalid confirmation request, please try again. Make sure you follow the steps from the confirmation mail or resend the confirmation link again.</source>
+            </trans-unit>А
+            <trans-unit id="tx_nlauth_user.flash.confirmation_expired">
+                <source>Your confirmation link has expired, please resend the confirmation link again.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.confirmation_completed">
+                <source>You have successfully confirmed your account.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.register_successful">
+                <source>You have successfully registered your account. You will get a confirmation email as soon as your account will be approved.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.confirmation_loggedin">
+                <source>You have successfully confirmed your account and have been logged in automatically.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.approvement_invalid">
+                <source>Invalid approvement request, please try again. Make sure you follow the steps from the approvement mail or contact the administrator.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.approvement_expired">
+                <source>Approvement link has expired, please contact the administrator.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.approvement_completed">
+                <source>Account "%s" have successfully approved.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.approvement_declined">
+                <source>Account "%s" have declined.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.approvement_group_completed">
+                <source>Account "%s" have successfully approved and assigned to "%s".</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.update_profile_success">
+                <source>You have successfully updated your account profile.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.delete_profile_success">
+                <source>Your account has successfully been deleted.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.mail.password_recovery_subject">
+                <source>Reset your password on %s</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.mail.confirmation_subject">
+                <source>Please confirm your account on %s</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.mail.approvement_subject">
+                <source>Approve account on %s</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.mail.approve_status_subject">
+                <source>Welcome to the %s</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.mail.deletion_subject">
+                <source>User account deletion on %s</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.mail.welcome_subject">
+                <source>Welcome to the %s</source>
+            </trans-unit>
+            <trans-unit id="validationErrors.errors">
+                <source>There where some errors with your input:</source>
+            </trans-unit>
+            <trans-unit id="validator.equal.invalid">
+                <source>Die angegebenen Werte sind nicht gleich.</source>
+            </trans-unit>
+            <trans-unit id="validator.equal.negate_invalid">
+                <source>The given values are equal.</source>
+            </trans-unit>
+            <trans-unit id="validator.validFrontendUser.invalid">
+                <source>Kein Benutzer, der mit %s übereinstimmt.</source>
+            </trans-unit>
+            <trans-unit id="validator.validFrontendUserGroup.invalid">
+                <source>No user group matching %s.</source>
+            </trans-unit>
+            <trans-unit id="validator.frontendUserIsSetProperty.invalid">
+                <source>Dieses Konto hat derzeit keine %s.</source>
+            </trans-unit>
+            <trans-unit id="validator.userTokenValidator.invalid">
+                <source>Invalid request, please try again.</source>
+            </trans-unit>
+            <trans-unit id="validator.userTokenValidator.expired">
+                <source>Die Anfrage ist abgelaufen. Bitte versuchen Sie es erneut.</source>
+            </trans-unit>
+            <trans-unit id="validator.uniqueFrontendUser.invalid">
+                <source>This %s is already taken.</source>
+            </trans-unit>
+            <trans-unit id="validator.filesize.between">
+                <source>The size of the selected items was not between %s and %s bytes.</source>
+            </trans-unit>
+            <trans-unit id="validator.filesize.less">
+                <source>The size of the selected items is less than %s bytes.</source>
+            </trans-unit>
+            <trans-unit id="validator.filesize.exceed">
+                <source>The size of the selected items exceeded %s bytes.</source>
+            </trans-unit>
+            <trans-unit id="validator.login.invalid">
+                <source>Die E-Mail oder das Passwort sind ungültig</source>
+            </trans-unit>
+            <trans-unit id="validation.error.1515759132">
+                <source><![CDATA[<h5>Bitte überprüfen Sie Ihren Benutzernamen / E-Mail und Ihr Passwort.</h5>Vergewissern Sie sich, dass Sie beide Angaben korrekt eingeben haben. Achten Sie auf die Groß- und Kleinschreibung.]]></source>
+            </trans-unit>
+            <trans-unit id="validator.abstractEntity.notValidatable">
+                <source>The given form does not contain data that can be validated.</source>
+            </trans-unit>
+            <trans-unit id="validator.abstractEntity.propertyDoesNotExist">
+                <source>Property does not exists.</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.username">
+                <source>Username</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.password">
+                <source>Password</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.usergroup">
+                <source>Usergroup</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.firstName">
+                <source>Firstname</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.middleName">
+                <source>Middlename</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.lastName">
+                <source>Lastname</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.telephone">
+                <source>Telephone</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.fax">
+                <source>Fax</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.title">
+                <source>LS &amp; CO Person of contact</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.zip">
+                <source>ZIP</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.city">
+                <source>City</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.country">
+                <source>Country</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.www">
+                <source>Website</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.company">
+                <source>Company</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user_domain_model_user.lastlogin">
+                <source>Last login</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

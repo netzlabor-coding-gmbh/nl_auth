@@ -1,0 +1,29 @@
+{
+    "name": "nl/nl-auth",
+    "type": "typo3-cms-extension",
+    "description": "TYPO3 authentication, registration, profile by netzlabor-coding.de ",
+    "version": "0.0.1",
+    "authors": [
+        {
+            "name": "Maksym",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^7.6 || ^8.7 || ^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "NL\\NlAuth\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NL\\NlAuth\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "nl_auth": "self.version",
+        "typo3-ter/nl-auth": "self.version"
+    }
+}

@@ -1,0 +1,19 @@
+
+config.tx_extbase {
+  persistence {
+    classes {
+
+      NL\NlAuth\Domain\Model\FrontendUser {
+        mapping {
+          tableName = fe_users
+        }
+      }
+      NL\NlAuth\Domain\Model\FrontendUserGroup {
+        mapping {
+          tableName = fe_groups
+        }
+      }
+
+    }
+  }
+}

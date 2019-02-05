@@ -1,0 +1,973 @@
+<T3DataStructure>
+    <sheets>
+        <!-- #################################### DEFAULT SHEET #################################### -->
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_general</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <switchableControllerActions>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.choose_view</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.please_choose</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_login</numIndex>
+                                        <numIndex index="1">Auth->showLoginForm;Auth->showLogoutForm;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_password_recovery</numIndex>
+                                        <numIndex index="1">Recovery->showPasswordResetRequestForm;Recovery->requestPasswordReset;Recovery->showPasswordResetForm;Recovery->passwordReset;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_registration</numIndex>
+                                        <numIndex index="1">Registration->showRegistrationForm;Registration->register;Registration->confirm;Registration->resend;Registration->approve;</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_profile</numIndex>
+                                        <numIndex index="1">Profile->edit;Profile->update;Profile->delete;</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </switchableControllerActions>
+                </el>
+            </ROOT>
+        </sDEF>
+        <!-- #################################### LOGIN SHEET #################################### -->
+        <s_login>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_login</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Auth->showLoginForm;Auth->showLogoutForm;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <persistence.storagePid>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.user_storage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>99</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </persistence.storagePid>
+                    <persistence.recursive>
+                        <TCEforms>
+                            <label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.recursive</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+                                        <numIndex index="1">250</numIndex>
+                                    </numIndex>
+                                </items>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </persistence.recursive>
+                </el>
+            </ROOT>
+        </s_login>
+        <!-- #################################### LOGIN LINKS SHEET #################################### -->
+        <s_loginLinks>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_links</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Auth->showLoginForm;Auth->showLogoutForm;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.registration.page>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.registrationPage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.page>
+                </el>
+            </ROOT>
+        </s_loginLinks>
+        <!-- #################################### REDIRECT SHEET #################################### -->
+        <s_redirect>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_redirect</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Auth->showLoginForm;Auth->showLogoutForm;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.login.redirectPageLogin>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectPageLogin</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.login.redirectPageLogin>
+                    <settings.login.redirectPageLogout>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectPageLogout</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.login.redirectPageLogout>
+                </el>
+            </ROOT>
+        </s_redirect>
+        <!-- #################################### RECOVERY SHEET #################################### -->
+        <s_recovery>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_password_recovery</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Recovery->showPasswordResetRequestForm;Recovery->requestPasswordReset;Recovery->showPasswordResetForm;Recovery->passwordReset;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.passwordRecovery.loginOnSuccess>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.login_on_success_password_recovery</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.passwordRecovery.loginOnSuccess>
+                    <persistence.storagePid>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.user_storage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>99</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </persistence.storagePid>
+                    <persistence.recursive>
+                        <TCEforms>
+                            <label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.recursive</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+                                        <numIndex index="1">250</numIndex>
+                                    </numIndex>
+                                </items>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </persistence.recursive>
+                </el>
+            </ROOT>
+        </s_recovery>
+        <!-- #################################### RECOVERY LINKS SHEET #################################### -->
+        <s_recoveryLinks>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_links</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Recovery->showPasswordResetRequestForm;Recovery->requestPasswordReset;Recovery->showPasswordResetForm;Recovery->passwordReset;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.passwordRecovery.showLoginLink>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showLoginLink</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.passwordRecovery.showLoginLink>
+                    <settings.login.page>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.loginPage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.login.page>
+                </el>
+            </ROOT>
+        </s_recoveryLinks>
+        <!-- #################################### RECOVERY REDIRECT SHEET #################################### -->
+        <s_recoveryRedirect>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_redirect</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Recovery->showPasswordResetRequestForm;Recovery->requestPasswordReset;Recovery->showPasswordResetForm;Recovery->passwordReset;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.passwordRecovery.redirectPageReset>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectPageReset</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.passwordRecovery.redirectPageReset>
+                    <settings.passwordRecovery.redirectDisable>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectDisable</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_common.xlf:disable</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.passwordRecovery.redirectDisable>
+                </el>
+            </ROOT>
+        </s_recoveryRedirect>
+        <!-- #################################### REGISTRATION SHEET #################################### -->
+        <s_registration>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_registration</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Registration->showRegistrationForm;Registration->register;Registration->confirm;Registration->resend;Registration->approve;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.registration.fields>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.registrationFields</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.username</numIndex>
+                                        <numIndex index="1">username</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.password</numIndex>
+                                        <numIndex index="1">password</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.name</numIndex>
+                                        <numIndex index="1">name</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.firstName</numIndex>
+                                        <numIndex index="1">firstName</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.middleName</numIndex>
+                                        <numIndex index="1">middleName</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.lastName</numIndex>
+                                        <numIndex index="1">lastName</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.address</numIndex>
+                                        <numIndex index="1">address</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.telephone</numIndex>
+                                        <numIndex index="1">telephone</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.fax</numIndex>
+                                        <numIndex index="1">fax</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.email</numIndex>
+                                        <numIndex index="1">email</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.title</numIndex>
+                                        <numIndex index="1">title</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.zip</numIndex>
+                                        <numIndex index="1">zip</numIndex>
+                                    </numIndex>
+                                    <numIndex index="12" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.city</numIndex>
+                                        <numIndex index="1">city</numIndex>
+                                    </numIndex>
+                                    <numIndex index="13" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.country</numIndex>
+                                        <numIndex index="1">country</numIndex>
+                                    </numIndex>
+                                    <numIndex index="14" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.www</numIndex>
+                                        <numIndex index="1">www</numIndex>
+                                    </numIndex>
+                                    <numIndex index="15" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.company</numIndex>
+                                        <numIndex index="1">company</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>100</maxitems>
+                                <size>10</size>
+                                <autoSizeMax>20</autoSizeMax>
+                                <minitems>0</minitems>
+                                <allowNonIdValues>1</allowNonIdValues>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.fields>
+                    <settings.registration.takeEmailAsUsername>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.takeEmailAsUsername</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.takeEmailAsUsername>
+                    <settings.registration.overrideUserGroup>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.overrideUserGroup</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>fe_groups</allowed>
+                                <size>3</size>
+                                <maxitems>50</maxitems>
+                                <minitems>0</minitems>
+                                <autoSizeMax>10</autoSizeMax>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.overrideUserGroup>
+                    <persistence.storagePid>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.user_storage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>99</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </persistence.storagePid>
+                    <persistence.recursive>
+                        <TCEforms>
+                            <label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.recursive</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+                                        <numIndex index="1">250</numIndex>
+                                    </numIndex>
+                                </items>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </persistence.recursive>
+                </el>
+            </ROOT>
+        </s_registration>
+        <!-- #################################### CONFIRMATION SHEET #################################### -->
+        <s_confirmation>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_confirmation</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Registration->showRegistrationForm;Registration->register;Registration->confirm;Registration->resend;Registration->approve;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.registration.confirmation.enable>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.confirmation</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.confirmation.enable>
+                    <settings.registration.confirmation.loginOnSuccess>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.loginOnSuccess</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.confirmation.loginOnSuccess>
+                </el>
+            </ROOT>
+        </s_confirmation>
+        <!-- #################################### APPROVEMENT SHEET #################################### -->
+        <s_approvement>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_approvement</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Registration->showRegistrationForm;Registration->register;Registration->confirm;Registration->resend;Registration->approve;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.registration.approvement.enable>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.approvement</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.approvement.enable>
+                    <settings.registration.approvement.adminMailList>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.adminMailList</label>
+                            <config>
+                                <type>text</type>
+                                <cols>32</cols>
+                                <rows>2</rows>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.approvement.adminMailList>
+                    <settings.registration.approvement.assignGroup>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.assignGroup</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.approvement.assignGroup>
+                    <settings.registration.approvement.multiple>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.multiple</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.approvement.multiple>
+                    <settings.registration.approvement.availableGroups>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.availableGroups</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>fe_groups</allowed>
+                                <size>3</size>
+                                <maxitems>50</maxitems>
+                                <minitems>0</minitems>
+                                <autoSizeMax>10</autoSizeMax>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.approvement.availableGroups>
+                    <settings.registration.approvement.declineGroup>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.declineGroup</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>fe_groups</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.approvement.declineGroup>
+                </el>
+            </ROOT>
+        </s_approvement>
+        <!-- #################################### REGISTRATION REDIRECT SHEET #################################### -->
+        <s_registrationRedirect>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_redirect</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Registration->showRegistrationForm;Registration->register;Registration->confirm;Registration->resend;Registration->approve;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.registration.redirectPageRegistration>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectPageRegistration</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.redirectPageRegistration>
+                    <settings.registration.redirectPageConfirmation>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectPageConfirmation</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.redirectPageConfirmation>
+                    <settings.registration.redirectDisable>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.redirectDisable</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_common.xlf:disable</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.redirectDisable>
+                </el>
+            </ROOT>
+        </s_registrationRedirect>
+        <!-- #################################### NOTIFICATIONS SHEET #################################### -->
+        <s_notifications>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_notifications</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Registration->showRegistrationForm;Registration->register;Registration->confirm;Registration->resend;Registration->approve;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.registration.notifications.welcome>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.notifications.welcome</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.notifications.welcome>
+                    <settings.registration.notifications.approve>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.notifications.approve</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.registration.notifications.approve>
+                </el>
+            </ROOT>
+        </s_notifications>
+        <!-- #################################### PROFILE SHEET #################################### -->
+        <s_profile>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_profile</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Profile->edit;Profile->update;Profile->delete;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.profile.fields>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.registrationFields</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectMultipleSideBySide</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.username</numIndex>
+                                        <numIndex index="1">username</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.password</numIndex>
+                                        <numIndex index="1">password</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.name</numIndex>
+                                        <numIndex index="1">name</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.firstName</numIndex>
+                                        <numIndex index="1">firstName</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.middleName</numIndex>
+                                        <numIndex index="1">middleName</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.lastName</numIndex>
+                                        <numIndex index="1">lastName</numIndex>
+                                    </numIndex>
+                                    <numIndex index="6" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.address</numIndex>
+                                        <numIndex index="1">address</numIndex>
+                                    </numIndex>
+                                    <numIndex index="7" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.telephone</numIndex>
+                                        <numIndex index="1">telephone</numIndex>
+                                    </numIndex>
+                                    <numIndex index="8" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.fax</numIndex>
+                                        <numIndex index="1">fax</numIndex>
+                                    </numIndex>
+                                    <numIndex index="9" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.email</numIndex>
+                                        <numIndex index="1">email</numIndex>
+                                    </numIndex>
+                                    <numIndex index="10" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.title</numIndex>
+                                        <numIndex index="1">title</numIndex>
+                                    </numIndex>
+                                    <numIndex index="11" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.zip</numIndex>
+                                        <numIndex index="1">zip</numIndex>
+                                    </numIndex>
+                                    <numIndex index="12" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.city</numIndex>
+                                        <numIndex index="1">city</numIndex>
+                                    </numIndex>
+                                    <numIndex index="13" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.country</numIndex>
+                                        <numIndex index="1">country</numIndex>
+                                    </numIndex>
+                                    <numIndex index="14" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.www</numIndex>
+                                        <numIndex index="1">www</numIndex>
+                                    </numIndex>
+                                    <numIndex index="15" type="array">
+                                        <numIndex index="0">LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tx_nlauth_user_domain_model_user.company</numIndex>
+                                        <numIndex index="1">company</numIndex>
+                                    </numIndex>
+                                </items>
+                                <maxitems>100</maxitems>
+                                <size>10</size>
+                                <autoSizeMax>20</autoSizeMax>
+                                <minitems>0</minitems>
+                                <allowNonIdValues>1</allowNonIdValues>
+                            </config>
+                        </TCEforms>
+                    </settings.profile.fields>
+                    <settings.profile.takeEmailAsUsername>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.takeEmailAsUsername</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.profile.takeEmailAsUsername>
+                    <persistence.storagePid>
+                        <TCEforms>
+                            <exclude>1</exclude>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.user_storage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>3</size>
+                                <maxitems>99</maxitems>
+                                <minitems>0</minitems>
+                                <show_thumbs>1</show_thumbs>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </persistence.storagePid>
+                    <persistence.recursive>
+                        <TCEforms>
+                            <label>LLL:EXT:lang/Resources/Private/Language/locallang_general.xlf:LGL.recursive</label>
+                            <config>
+                                <type>select</type>
+                                <renderType>selectSingle</renderType>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.0</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.1</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.2</numIndex>
+                                        <numIndex index="1">2</numIndex>
+                                    </numIndex>
+                                    <numIndex index="3" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.3</numIndex>
+                                        <numIndex index="1">3</numIndex>
+                                    </numIndex>
+                                    <numIndex index="4" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.4</numIndex>
+                                        <numIndex index="1">4</numIndex>
+                                    </numIndex>
+                                    <numIndex index="5" type="array">
+                                        <numIndex index="0">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:recursive.I.5</numIndex>
+                                        <numIndex index="1">250</numIndex>
+                                    </numIndex>
+                                </items>
+                                <minitems>0</minitems>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                            </config>
+                        </TCEforms>
+                    </persistence.recursive>
+                </el>
+            </ROOT>
+        </s_profile>
+        <!-- #################################### DELETION SHEET #################################### -->
+        <s_deletion>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.sheet_deletion</sheetTitle>
+                    <displayCond><![CDATA[FIELD:sDEF.switchableControllerActions:=:Profile->edit;Profile->update;Profile->delete;]]></displayCond>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.profile.deletion.enable>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.deletion</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.profile.deletion.enable>
+                    <settings.profile.deletion.hard>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.deletion_hard</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.profile.deletion.hard>
+                    <settings.profile.deletion.notifyAdmin>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.deletion_notifyAdmin</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.profile.deletion.notifyAdmin>
+                    <settings.profile.deletion.adminMailList>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.adminMailList</label>
+                            <config>
+                                <type>text</type>
+                                <cols>32</cols>
+                                <rows>2</rows>
+                            </config>
+                        </TCEforms>
+                    </settings.profile.deletion.adminMailList>
+                </el>
+            </ROOT>
+        </s_deletion>
+    </sheets>
+</T3DataStructure>

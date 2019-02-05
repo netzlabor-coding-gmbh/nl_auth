@@ -1,0 +1,19 @@
+{namespace nl=NL\NlAuth\ViewHelpers}
+
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <nl:logoutForm
+            pageUid="{settings.login.page}"
+            method="post"
+            class="tx-nl-auth-user-logout-form form-inline">
+        <f:render partial="Form/Static" arguments="{
+            translationKey: 'tx_nlauth_user.logged_user',
+            defaultLabel: 'Username:',
+            value: user.username
+        }"/>
+        <f:render partial="Form/SubmitButton" arguments="{
+            label: 'Sign out'
+        }"/>
+    </nl:logoutForm>
+</f:section>

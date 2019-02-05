@@ -1,0 +1,7 @@
+Here is your download link:
+
+{download.url}
+
+This address will expire on <f:format.date format="{settings.dateFormat}">{download.endtime}</f:format.date>, after that archive will be removed. If you are unable to open the link, please copy and paste it into your browser.
+
+Your website team.

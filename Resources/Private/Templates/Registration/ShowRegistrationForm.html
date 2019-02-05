@@ -1,0 +1,47 @@
+{namespace nl=NL\NlAuth\ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <f:security.ifAuthenticated>
+        <f:else>
+            <f:form action="register" name="user" object="{user}" class="registerForm tx-nl-auth-user-registration-form">
+                <f:if condition="{settings.registration.fields}">
+                    <f:then>
+                        <f:for each="{v:iterator.explode(content: settings.registration.fields, glue: ',')}" as="field">
+                            <f:render partial="Form/Fields/{f:format.case(value: field, mode: 'capital')}" arguments="{objectName: 'user'}" />
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <f:render partial="Form/Fields/Username" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Password" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Name" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/FirstName" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/MiddleName" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/LastName" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Address" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Telephone" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Fax" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Email" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Zip" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/City" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Country" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Www" arguments="{objectName: 'user'}" />
+                        <f:render partial="Form/Fields/Company" arguments="{objectName: 'user'}" />
+                    </f:else>
+                </f:if>
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" name="accept"> I accept the terms and conditions
+                        </label>
+                    </div>
+                </div>
+                <f:render partial="Form/SubmitButton" arguments="{
+                label: 'SIGN UP'
+            }"/>
+            </f:form>
+        </f:else>
+    </f:security.ifAuthenticated>
+</f:section>

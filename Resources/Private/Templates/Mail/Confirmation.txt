@@ -1,0 +1,9 @@
+Dear {user.username},
+
+Thank you for signing up on our website. Please use the following address to complete your registration:
+
+{hashUri}
+
+This address will expire on <f:format.date format="{settings.dateFormat}">{expiryDate}</f:format.date>, after that you need to resend confirmation link. If you are unable to open the link, please copy and paste it into your browser.
+
+Your website team.

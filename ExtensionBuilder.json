@@ -1,0 +1,50 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "TYPO3 authentication, registration, profile by netzlabor-coding.de ",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "nl_auth",
+        "name": "Auth",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "netzlabor coding GmbH",
+                "email": "maksim.chubin@netzlabor-coding.de",
+                "name": "Maksym",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "description": "Frontend users management plugin",
+                "key": "user",
+                "name": "User"
+            }
+        ],
+        "vendorName": "NL"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-12-07 01:07",
+        "extension_builder_version": "9.10.0",
+        "be_user": " (1)"
+    }
+}
