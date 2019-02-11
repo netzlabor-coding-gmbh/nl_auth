@@ -154,25 +154,15 @@ class RecoveryController extends AbstractController
             $this->request->getControllerExtensionName()
         );
 
-        if ($this->request->getFormat() === "json") {
-            $status = $isSent ? 200 : 422;
-            $this->view->assignMultiple([
-                "message" => $message,
-                "status" => $status
-            ]);
-            $this->view->setVariablesToRender(["message", "status"]);
-            $this->response->setStatus($status);
-        } else {
-            $this->addFlashMessage(
-                $message,
-                null,
-                $isSent ? FlashMessage::OK : FlashMessage::ERROR
-            );
+        $this->addFlashMessage(
+            $message,
+            null,
+            $isSent ? FlashMessage::OK : FlashMessage::ERROR
+        );
 
-            $this->redirectToUri($this->buildUri(
-                $this->getSettingsValue('passwordRecovery.page')
-            ));
-        }
+        $this->redirectToUri($this->buildUri(
+            $this->getSettingsValue('passwordRecovery.page')
+        ));
     }
 
     /**
@@ -233,22 +223,14 @@ class RecoveryController extends AbstractController
                 $this->getSettingsValue('passwordRecovery.redirectPageReset', $this->getSettingsValue('passwordRecovery.page'))
         );
 
-        if ($this->request->getFormat() === "json") {
-            $this->view->assignMultiple([
-                "message" => $message,
-                "status" => 200,
-                "uri" => $uri,
-            ]);
-            $this->view->setVariablesToRender(["message", "status", "uri"]);
-        } else {
-            $this->addFlashMessage(
-                $message,
-                null,
-                FlashMessage::OK
-            );
+        $this->addFlashMessage(
+            $message,
+            null,
+            FlashMessage::OK
+        );
 
-            $this->redirectToUri($uri);
-        }
+        $this->redirectToUri($uri);
+
     }
 
     /**

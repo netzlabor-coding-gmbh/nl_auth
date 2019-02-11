@@ -97,7 +97,7 @@
                 <source>Your password reset request has expired, please start the reset process again.</source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user.flash.password_reset_completed">
-                <source><![CDATA[<h1 class="segoeprint brown">Passwort wurde geändert!</h1>Sie können sich jetzt mit Ihrem Benutzernamen oder Ihrer E-Mail-Adresse und Ihrem neuen Passwort anmelden.]]></source>
+                <source><![CDATA[<h1>Passwort wurde geändert!</h1>Sie können sich jetzt mit Ihrem Benutzernamen oder Ihrer E-Mail-Adresse und Ihrem neuen Passwort anmelden.]]></source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user.flash.password_reset_loggedin">
                 <source>You have successfully changed your password and have been logged in automatically.</source>
@@ -244,7 +244,7 @@
                 <source>Description</source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user_domain_model_user.title">
-                <source>LS &amp; CO Person of contact</source>
+                <source>Title</source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user_domain_model_user.zip">
                 <source>ZIP</source>

@@ -39,13 +39,6 @@ abstract class AbstractController extends ActionController
     protected $signalSlotDispatcher;
 
     /**
-     * @var array
-     */
-    protected $viewFormatToObjectNameMap = [
-        'json' => JsonView::class,
-    ];
-
-    /**
      * @param Dispatcher $signalSlotDispatcher
      */
     public function injectSignalSlotDispatcher(Dispatcher $signalSlotDispatcher)

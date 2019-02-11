@@ -158,25 +158,6 @@ plugin.tx_nlauth_user {
     }
 }
 
-user_nlauth_ajax = PAGE
-user_nlauth_ajax {
-    typeNum = {$plugin.tx_nlauth_user.settings.ajaxTypeNum}
-
-    config {
-        disableAllHeaderCode = 1
-        debug = 0
-        no_cache = 1
-        additionalHeaders {
-            10 {
-                header = Content-Type: application/json
-                replace = 1
-            }
-        }
-    }
-
-    10 < tt_content.list.20.nlauth_user
-}
-
 # these classes are only used in auto-generated templates
 plugin.tx_nlauth._CSS_DEFAULT_STYLE (
     textarea.f3-form-error {

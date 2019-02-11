@@ -13,7 +13,6 @@ plugin.tx_nlauth_user {
         storagePid =
     }
     settings {
-        ajaxTypeNum = 99
         // cat=plugin.tx_nlauth_user//dateFormat; type=string; label= Date format: Format for date output (PHP date/strftime), value of TYPO3_CONF_VARS/SYS/ddmmyy if empty
         dateFormat = d-m-y
         login {

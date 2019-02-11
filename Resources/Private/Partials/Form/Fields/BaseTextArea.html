@@ -1,6 +1,6 @@
 <f:form.validationResults for="{property}">
     <div class="form-group {f:if(condition: validationResults.errors, then: 'has-error has-feedback')}">
-        <label class="sr-only" for="tx-nl-auth-user-{property}-field">
+        <label for="tx-nl-auth-user-{property}-field">
             <f:translate key="{translationKey}">{defaultLabel}</f:translate>
         </label>
         <f:form.textarea
