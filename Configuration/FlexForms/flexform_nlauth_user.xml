@@ -54,6 +54,36 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <settings.login.showPermaLogin>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.enable_permalogin</label>
+                            <config>
+                                <default>1</default>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.login.showPermaLogin>
+                    <settings.login.showLogoutFormAfterLogin>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.show_logoutFormAfterLogin</label>
+                            <config>
+                                <default></default>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.login.showLogoutFormAfterLogin>
                     <persistence.storagePid>
                         <TCEforms>
                             <exclude>1</exclude>
@@ -124,6 +154,47 @@
                 </TCEforms>
                 <type>array</type>
                 <el>
+                    <settings.login.showForgotPasswordLink>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.show_forgot_password</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.login.showForgotPasswordLink>
+                    <settings.passwordRecovery.page>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.passwordRecoveryPage</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>pages</allowed>
+                                <size>1</size>
+                                <maxitems>1</maxitems>
+                                <minitems>0</minitems>
+                            </config>
+                        </TCEforms>
+                    </settings.passwordRecovery.page>
+                    <settings.login.showRegistrationLink>
+                        <TCEforms>
+                            <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.showRegistrationLink</label>
+                            <config>
+                                <type>check</type>
+                                <items type="array">
+                                    <numIndex index="1" type="array">
+                                        <numIndex index="0">LLL:EXT:lang/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+                                        <numIndex index="1">1</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.login.showRegistrationLink>
                     <settings.registration.page>
                         <TCEforms>
                             <label>LLL:EXT:nl_auth/Resources/Private/Language/locallang_db.xlf:tt_content.pi_flexform.registrationPage</label>

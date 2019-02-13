@@ -1,5 +1,6 @@
 <f:form.validationResults for="{name}">
     <div class="form-group m-form__group {f:if(condition: validationResults.errors, then: 'has-danger')}">
+        <label for="tx-nl-auth-user-{name}-field">{label}</label>
         <f:form.textfield
                 type="{type}"
                 name="{name}"

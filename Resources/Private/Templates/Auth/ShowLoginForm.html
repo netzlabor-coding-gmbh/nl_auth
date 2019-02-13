@@ -10,7 +10,6 @@
                     pageUid="{settings.login.page}"
                     method="post"
                     class="loginForm">
-                <h4>Please enter your email & password.</h4>
                 <f:render partial="Form/TextField" arguments="{
                     name: 'user',
                     type: 'text',
@@ -26,12 +25,12 @@
                     additionalAttributes: {data-rsa-encryption: ''}
                   }"/>
                 <f:render partial="Form/SubmitButton" arguments="{
-                    label: 'SIGN IN'
+                    label: 'Login'
                 }"/>
             </nl:loginForm>
             <f:if condition="{settings.registration.page}">
                 <f:then>
-                    <p class="text-center text-gray">Don’t have an account?
+                    <p class="text-gray mt-2">Don’t have an account?
                         <f:link.page pageUid="{settings.registration.page}">Request access</f:link.page>
                     </p>
                 </f:then>
