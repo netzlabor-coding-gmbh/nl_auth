@@ -2,7 +2,7 @@
     "name": "nl/nl-auth",
     "type": "typo3-cms-extension",
     "description": "TYPO3 authentication, registration, profile by netzlabor-coding.de ",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "authors": [
         {
             "name": "Maksym",
