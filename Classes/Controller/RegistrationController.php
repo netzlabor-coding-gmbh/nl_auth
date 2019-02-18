@@ -132,7 +132,6 @@ class RegistrationController extends AbstractController
      */
     public function registerAction(FrontendUser $user)
     {
-
         if ($this->getSettingsValue('registration.overrideUserGroup')) {
             $user->overrideUsergroupsByUids(
                 GeneralUtility::trimExplode(
@@ -183,7 +182,7 @@ class RegistrationController extends AbstractController
             );
         }
 
-        $this->redirect('showRegistrationForm');
+        $this->view->assign('user', $user);
     }
 
     /**
@@ -198,6 +197,8 @@ class RegistrationController extends AbstractController
      */
     public function confirmAction($hash)
     {
+        $user = null;
+
         $userTokenValidator = $this->validatorResolver->createValidator(UserTokenValidator::class, [
             'tokenType' => UserTokenType::CONFIRMATION,
             'hmacBy' => 'email',
@@ -268,7 +269,7 @@ class RegistrationController extends AbstractController
             );
         }
 
-        $this->redirect('showRegistrationForm');
+        $this->view->assign('user', $user);
     }
 
     /**
@@ -290,6 +291,8 @@ class RegistrationController extends AbstractController
      */
     public function approveAction($hash, $uid = null)
     {
+        $user = null;
+
         $findMethod = $this->getSettingsValue('registration.approvement.multiple')
             ? 'findWithDisabledByUid' : 'findDisabledByUid';
 
@@ -337,7 +340,10 @@ class RegistrationController extends AbstractController
             $user = $this->frontendUserRepository->$findMethod($token['uid']);
 
             $isFirst = !$user->getTxNlauthUserApprovedat();
-            $decline = false;
+
+            $user->setApproved(
+                $this->getSettingsValue('registration.confirmation.enable')
+            );
 
             if ($uid !== null) {
                 /* @var FrontendUserGroup $userGroup */
@@ -345,36 +351,16 @@ class RegistrationController extends AbstractController
 
                 $user->addUsergroup($userGroup);
 
-                if ($this->getSettingsValue('registration.approvement.declineGroup') ==
-                    $userGroup->getUid()) {
-
-                    $decline = true;
-
-                    $this->addLocalizedFlashMessage(
-                        'tx_nlauth_user.flash.approvement_declined',
-                        [$user->getUsername(), $userGroup->getTitle()],
-                        FlashMessage::OK
-                    );
-                } else {
-                    $this->addLocalizedFlashMessage(
-                        'tx_nlauth_user.flash.approvement_group_completed',
-                        [$user->getUsername(), $userGroup->getTitle()],
-                        FlashMessage::OK
-                    );
-                }
+                $this->addLocalizedFlashMessage(
+                    'tx_nlauth_user.flash.approvement_group_completed',
+                    [$user->getUsername(), $userGroup->getTitle()],
+                    FlashMessage::OK
+                );
             } else {
                 $this->addLocalizedFlashMessage(
                     'tx_nlauth_user.flash.approvement_completed',
                     [$user->getUsername()],
                     FlashMessage::OK
-                );
-            }
-
-            if ($decline) {
-                $user->setDeclined();
-            } else {
-                $user->setApproved(
-                    $this->getSettingsValue('registration.confirmation.enable')
                 );
             }
 
@@ -386,16 +372,126 @@ class RegistrationController extends AbstractController
             }
 
             if ($this->getSettingsValue('registration.notifications.approve') && $isFirst) {
-                $this->mailService->sendApproveStatusMessage($user, !$decline);
+                $this->mailService->sendApproveStatusMessage($user, true);
             }
 
             $this->emitSignal(
                 RegistrationSignalType::AFTER_SUCCESSFUL_APPROVEMENT,
                 ['user' => $user]
             );
-
-            $this->view->assign('user', $user);
         }
+
+        if (!$this->getSettingsValue('registration.redirectDisable') &&
+            $this->getSettingsValue('registration.redirectPageApprovement')) {
+            $this->redirectToUri(
+                $this->buildUri($this->getSettingsValue('registration.redirectPageApprovement'))
+            );
+        }
+
+        $this->view->assign('user', $user);
+    }
+
+    /**
+     * @param string $hash
+     * @param int $uid
+     * @throws IllegalObjectTypeException
+     * @throws InvalidSlotException
+     * @throws InvalidSlotReturnException
+     * @throws \Exception
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\UnknownObjectException
+     */
+    public function declineAction($hash, $uid = null)
+    {
+        $user = null;
+
+        $findMethod = $this->getSettingsValue('registration.approvement.multiple')
+            ? 'findWithDisabledByUid' : 'findDisabledByUid';
+
+        $userTokenValidator = $this->validatorResolver->createValidator(UserTokenValidator::class, [
+            'tokenType' => UserTokenType::APPROVEMENT,
+            'hmacBy' => 'email',
+            'findMethod' => $findMethod,
+        ]);
+
+        $validationResults = $userTokenValidator->validate($hash);
+
+        if ($uid) {
+            $userGroupValidator = $this->validatorResolver->createValidator(ValidFrontendUserGroupValidator::class, [
+                'property' => 'uid',
+            ]);
+
+            $validationResults->merge(
+                $userGroupValidator->validate($uid)
+            );
+        }
+
+        if ($validationResults->hasErrors()) {
+            switch ($validationResults->getFirstError()->getCode()) {
+                case 1515975493:
+                    $this->addLocalizedFlashMessage(
+                        'tx_nlauth_user.flash.approvement_expired',
+                        null,
+                        FlashMessage::ERROR
+                    );
+                    break;
+                case 1515975644:
+                case 1516021046:
+                    $this->addLocalizedFlashMessage(
+                        'tx_nlauth_user.flash.approvement_invalid',
+                        null,
+                        FlashMessage::ERROR
+                    );
+                    break;
+            };
+
+            $this->emitSignal(RegistrationSignalType::AFTER_FAILED_APPROVEMENT);
+        } else {
+            $token = $this->userTokenService->getToken($hash, UserTokenType::APPROVEMENT);
+            /* @var FrontendUser $user */
+            $user = $this->frontendUserRepository->$findMethod($token['uid']);
+
+            if ($uid !== null) {
+                /* @var FrontendUserGroup $userGroup */
+                $userGroup = $this->frontendUserGroupRepository->findByUid($uid);
+
+                $user->addUsergroup($userGroup);
+
+                $this->addLocalizedFlashMessage(
+                    'tx_nlauth_user.flash.decline_group_completed',
+                    [$user->getUsername(), $userGroup->getTitle()],
+                    FlashMessage::OK
+                );
+            } else {
+                $this->addLocalizedFlashMessage(
+                    'tx_nlauth_user.flash.decline_completed',
+                    [$user->getUsername()],
+                    FlashMessage::OK
+                );
+            }
+
+            $user->setDeclined();
+
+            $this->frontendUserRepository->update($user);
+            $this->persistenceManager->persistAll();
+
+            $this->userTokenService->removeToken($hash);
+
+            $this->mailService->sendApproveStatusMessage($user, false);
+
+            $this->emitSignal(
+                RegistrationSignalType::AFTER_SUCCESSFUL_APPROVEMENT,
+                ['user' => $user]
+            );
+        }
+
+        if (!$this->getSettingsValue('registration.redirectDisable') &&
+            $this->getSettingsValue('registration.redirectPageDecline')) {
+            $this->redirectToUri(
+                $this->buildUri($this->getSettingsValue('registration.redirectPageDecline'))
+            );
+        }
+
+        $this->view->assign('user', $user);
     }
 
     /**
@@ -460,13 +556,10 @@ class RegistrationController extends AbstractController
             $hashUris['Approve'] = $this->getAbsoluteUriFor('approve', ['hash' => $hash]);
         }
 
-        if ($this->getSettingsValue('registration.approvement.declineGroup')) {
-            $hashUris[$this->getSettingsValue('registration.approvement.declineGroup')] =
-                $this->getAbsoluteUriFor('approve', [
-                    'hash' => $hash,
-                    'uid' => $this->getSettingsValue('registration.approvement.declineGroup')
-                ]);
-        }
+        $declineHashUri = $this->getAbsoluteUriFor('decline', [
+            'hash' => $hash,
+            'uid' => $this->getSettingsValue('registration.approvement.declineGroup')
+        ]);
 
         $adminMailList = GeneralUtility::trimExplode(
             ',',
@@ -475,7 +568,7 @@ class RegistrationController extends AbstractController
         );
 
         foreach ($adminMailList as $email) {
-            $this->mailService->sendApprovementMessage($email, $user, $hashUris, $expiryDate);
+            $this->mailService->sendApprovementMessage($email, $user, $hashUris, $declineHashUri, $expiryDate);
         }
     }
 

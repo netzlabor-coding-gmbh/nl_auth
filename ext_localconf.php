@@ -8,14 +8,14 @@ call_user_func(function() {
         [
             'Auth' => 'showLoginForm, showLogoutForm',
             'Recovery' => 'showPasswordResetRequestForm, showPasswordResetForm, requestPasswordReset, passwordReset',
-            'Registration' => 'showRegistrationForm, register, confirm, resend, approve',
+            'Registration' => 'showRegistrationForm, register, confirm, resend, approve, decline',
             'Profile' => 'edit, update, delete',
         ],
         // non-cacheable actions
         [
             'Auth' => 'showLoginForm, showLogoutForm',
             'Recovery' => 'showPasswordResetRequestForm, showPasswordResetForm, requestPasswordReset, passwordReset',
-            'Registration' => 'showRegistrationForm, register, confirm, resend, approve',
+            'Registration' => 'showRegistrationForm, register, confirm, resend, approve, decline',
             'Profile' => 'edit, update, delete',
         ]
     );

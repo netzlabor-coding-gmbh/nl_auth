@@ -132,6 +132,12 @@
             <trans-unit id="tt_content.pi_flexform.redirectPageRegistration">
                 <source>After Successful Registration Redirect to Page</source>
             </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageApprovement">
+                <source>After Approvement Redirect to Page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pi_flexform.redirectPageDecline">
+                <source>After Decline Redirect to Page</source>
+            </trans-unit>
             <trans-unit id="tt_content.pi_flexform.template_file">
                 <source>Template File</source>
             </trans-unit>

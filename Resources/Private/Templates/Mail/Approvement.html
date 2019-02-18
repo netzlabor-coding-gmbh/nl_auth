@@ -18,18 +18,11 @@
 
     <ul>
         <f:for each="{hashUris}" as="hash" key="label">
-            <f:if condition="{label} != {settings.registration.approvement.declineGroup}">
-                <f:then>
-                    <li><a href="{hash}">{label}</a></li>
-                </f:then>
-            </f:if>
+            <li><a href="{hash}">{label}</a></li>
         </f:for>
     </ul>
 
-    <f:if condition="{settings.registration.approvement.declineGroup}">
-        <f:then>
-            <p>Or decline by link:</p>
-            <a href="{v:variable.get(name: 'hashUris.{settings.registration.approvement.declineGroup}', useRawKeys: 1)}">Decline</a>
-        </f:then>
-    </f:if>
+    <p>Or decline by link:</p>
+
+    <a href="{declineHashUri}">Decline</a>
 </div>

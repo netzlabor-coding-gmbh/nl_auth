@@ -129,11 +129,14 @@
             <trans-unit id="tx_nlauth_user.flash.approvement_completed">
                 <source>Account "%s" have successfully approved.</source>
             </trans-unit>
-            <trans-unit id="tx_nlauth_user.flash.approvement_declined">
+            <trans-unit id="tx_nlauth_user.flash.decline_completed">
                 <source>Account "%s" have declined.</source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user.flash.approvement_group_completed">
                 <source>Account "%s" have successfully approved and assigned to "%s".</source>
+            </trans-unit>
+            <trans-unit id="tx_nlauth_user.flash.decline_group_completed">
+                <source>Account "%s" have declined and assigned to "%s".</source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user.flash.update_profile_success">
                 <source>You have successfully updated your account profile.</source>
