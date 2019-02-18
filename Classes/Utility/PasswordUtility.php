@@ -2,9 +2,7 @@
 
 namespace NL\NlAuth\Utility;
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-use TYPO3\CMS\Saltedpasswords\Salt\SaltFactory;
-use TYPO3\CMS\Saltedpasswords\Utility\SaltedPasswordsUtility;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Class PasswordUtility
@@ -18,10 +16,16 @@ class PasswordUtility
      */
     public static function hashPassword($password)
     {
-        if (ExtensionManagementUtility::isLoaded('saltedpasswords')) {
-            if (SaltedPasswordsUtility::isUsageEnabled('FE')) {
-                $saltingInstance = SaltFactory::getSaltingInstance();
-                $password = $saltingInstance->getHashedPassword($password);
+        if (version_compare(TYPO3_version, 9.5, '>=')) {
+            /* @var \TYPO3\CMS\Core\Crypto\PasswordHashing\PasswordHashInterface $hashInstance */
+            $hashInstance = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Crypto\PasswordHashing\PasswordHashFactory::class)->getDefaultHashInstance('FE');
+            $password = $hashInstance->getHashedPassword($password);
+        } else {
+            if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('saltedpasswords')) {
+                if (\TYPO3\CMS\Saltedpasswords\Utility\SaltedPasswordsUtility::isUsageEnabled('FE')) {
+                    $saltingInstance = \TYPO3\CMS\Saltedpasswords\Salt\SaltFactory::getSaltingInstance();
+                    $password = $saltingInstance->getHashedPassword($password);
+                }
             }
         }
 
