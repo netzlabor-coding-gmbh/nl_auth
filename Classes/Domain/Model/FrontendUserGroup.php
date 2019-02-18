@@ -13,23 +13,23 @@ class FrontendUserGroup extends ExtbaseFrontendUserGroup
     /**
      * @var int
      */
-    protected $txNlAuthUserRedirectpid;
+    protected $txNlauthUserRedirectpid;
 
     /**
-     * @param int $txNlAuthUserRedirectPid
+     * @param int $txNlauthUserRedirectPid
      * @return FrontendUserGroup
      */
-    public function setTxNlAuthUserRedirectpid($txNlAuthUserRedirectPid)
+    public function settxNlauthUserRedirectpid($txNlauthUserRedirectPid)
     {
-        $this->txNlAuthUserRedirectpid = $txNlAuthUserRedirectPid;
+        $this->txNlauthUserRedirectpid = $txNlauthUserRedirectPid;
         return $this;
     }
 
     /**
      * @return int
      */
-    public function getTxNlAuthUserRedirectpid()
+    public function gettxNlauthUserRedirectpid()
     {
-        return $this->txNlAuthUserRedirectpid;
+        return $this->txNlauthUserRedirectpid;
     }
 }

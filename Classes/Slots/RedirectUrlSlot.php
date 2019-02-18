@@ -220,8 +220,8 @@ class RedirectUrlSlot
 
         if ($userGroups && $userGroups instanceof QueryResultInterface) {
             foreach ($userGroups as $group) {
-                if ($group instanceof FrontendUserGroup && !empty($group->getTxNlAuthUserRedirectpid())) {
-                    return $this->buildUri((int)$group->getTxNlAuthUserRedirectpid());
+                if ($group instanceof FrontendUserGroup && !empty($group->gettxNlauthUserRedirectpid())) {
+                    return $this->buildUri((int)$group->gettxNlauthUserRedirectpid());
                 }
             }
         }
@@ -236,8 +236,8 @@ class RedirectUrlSlot
     {
         $user = $this->authService->getUser();
 
-        if ($user instanceof FrontendUser && !empty($user->getTxNlAuthUserRedirectpid())) {
-            return $this->buildUri((int)$user->getTxNlAuthUserRedirectpid());
+        if ($user instanceof FrontendUser && !empty($user->gettxNlauthUserRedirectpid())) {
+            return $this->buildUri((int)$user->gettxNlauthUserRedirectpid());
         }
 
         return '';

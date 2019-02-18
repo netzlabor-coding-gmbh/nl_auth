@@ -5,12 +5,10 @@ namespace NL\NlAuth\Controller;
 use NL\NlAuth\Domain\Repository\FrontendUserRepository;
 use NL\NlAuth\Domain\Service\AuthService;
 use NL\NlAuth\SettingsTrait;
-use NL\NlAuth\Utility\ErrorUtility;
 use TYPO3\CMS\Core\Messaging\FlashMessage;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
-use TYPO3\CMS\Extbase\Mvc\View\JsonView;
 use TYPO3\CMS\Extbase\Mvc\View\ViewInterface;
 use TYPO3\CMS\Extbase\SignalSlot\Dispatcher;
 use TYPO3\CMS\Extbase\Utility\LocalizationUtility;
@@ -132,36 +130,6 @@ abstract class AbstractController extends ActionController
     protected function getErrorFlashMessage()
     {
         return false;
-    }
-
-    /**
-     * @return false|string
-     */
-    protected function errorAction()
-    {
-        if ($this->request->getFormat() === "json") {
-            $this->clearCacheOnError();
-            $this->response->setStatus(422);
-
-            return json_encode([
-                "message" => $this->getFlattenedValidationErrorMessage(),
-                "errors" => ErrorUtility::flattenedErrorsToArray($this->arguments->validate()->getFlattenedErrors()),
-            ], JSON_UNESCAPED_UNICODE);
-        } else {
-            $result = parent::errorAction();
-
-            if ($this->request->getReferringRequest() === null) {
-                call_user_func_array(
-                    [$this, $this->getSettingsValue('defaultReferrer.method', 'forward')],
-                    $this->getSettingsValue('defaultReferrer.arguments', [
-                        'showLoginForm',
-                        'Auth'
-                    ])
-                );
-            }
-
-            return $result;
-        }
     }
 
     /**

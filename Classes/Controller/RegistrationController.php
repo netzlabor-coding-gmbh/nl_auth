@@ -235,9 +235,9 @@ class RegistrationController extends AbstractController
             );
 
             $this->frontendUserRepository->update($user);
-            $this->userTokenService->removeToken($hash);
-
             $this->persistenceManager->persistAll();
+
+            $this->userTokenService->removeToken($hash);
 
             if ($this->getSettingsValue('registration.confirmation.loginOnSuccess')) {
                 $this->authService->login($user);
@@ -271,6 +271,9 @@ class RegistrationController extends AbstractController
         $this->redirect('showRegistrationForm');
     }
 
+    /**
+     * TODO: Resend confirmation link
+     */
     public function resendAction()
     {
 
@@ -333,7 +336,7 @@ class RegistrationController extends AbstractController
             /* @var FrontendUser $user */
             $user = $this->frontendUserRepository->$findMethod($token['uid']);
 
-            $isFirst = !$user->getTxNlAuthUserApprovedat();
+            $isFirst = !$user->gettxNlauthUserApprovedat();
             $decline = false;
 
             if ($uid !== null) {
@@ -376,6 +379,7 @@ class RegistrationController extends AbstractController
             }
 
             $this->frontendUserRepository->update($user);
+            $this->persistenceManager->persistAll();
 
             if (!$this->getSettingsValue('registration.approvement.multiple')) {
                 $this->userTokenService->removeToken($hash);
