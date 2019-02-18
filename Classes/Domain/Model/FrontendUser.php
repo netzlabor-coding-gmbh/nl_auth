@@ -148,7 +148,7 @@ class FrontendUser extends ExtbaseFrontendUser
      */
     public function setConfirmed($checkApproved = false)
     {
-        $this->settxNlauthUserConfirmedat(new \DateTime());
+        $this->setTxNlauthUserConfirmedat(new \DateTime());
 
         if (!$checkApproved || $this->txNlauthUserApprovedat) {
             $this->setDisable(false);
@@ -165,7 +165,7 @@ class FrontendUser extends ExtbaseFrontendUser
     public function setApproved($checkConfirmed = false)
     {
         if (!$this->txNlauthUserApprovedat) {
-            $this->settxNlauthUserApprovedat(new \DateTime());
+            $this->setTxNlauthUserApprovedat(new \DateTime());
         }
 
         if (!$checkConfirmed || $this->txNlauthUserConfirmedat) {
@@ -181,7 +181,7 @@ class FrontendUser extends ExtbaseFrontendUser
      */
     public function setDeclined()
     {
-        $this->settxNlauthUserDeclinedat(new \DateTime());
+        $this->setTxNlauthUserDeclinedat(new \DateTime());
         $this->setDisable(true);
 
         return $this;
@@ -208,7 +208,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @param int $txNlauthUserRedirectpid
      * @return $this
      */
-    public function settxNlauthUserRedirectpid($txNlauthUserRedirectpid)
+    public function setTxNlauthUserRedirectpid($txNlauthUserRedirectpid)
     {
         $this->txNlauthUserRedirectpid = $txNlauthUserRedirectpid;
         return $this;
@@ -217,7 +217,7 @@ class FrontendUser extends ExtbaseFrontendUser
     /**
      * @return int
      */
-    public function gettxNlauthUserRedirectpid()
+    public function getTxNlauthUserRedirectpid()
     {
         return $this->txNlauthUserRedirectpid;
     }
@@ -226,7 +226,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @return \DateTime
      * @api
      */
-    public function gettxNlauthUserConfirmedat()
+    public function getTxNlauthUserConfirmedat()
     {
         return $this->txNlauthUserConfirmedat;
     }
@@ -236,7 +236,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @api
      * @return $this
      */
-    public function settxNlauthUserConfirmedat(\DateTime $txNlauthUserConfirmedat)
+    public function setTxNlauthUserConfirmedat(\DateTime $txNlauthUserConfirmedat)
     {
         $this->txNlauthUserConfirmedat = $txNlauthUserConfirmedat;
         return $this;
@@ -246,7 +246,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @return \DateTime
      * @api
      */
-    public function gettxNlauthUserApprovedat()
+    public function getTxNlauthUserApprovedat()
     {
         return $this->txNlauthUserApprovedat;
     }
@@ -256,7 +256,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @api
      * @return $this
      */
-    public function settxNlauthUserApprovedat(\DateTime $txNlauthUserApprovedat)
+    public function setTxNlauthUserApprovedat(\DateTime $txNlauthUserApprovedat)
     {
         $this->txNlauthUserApprovedat = $txNlauthUserApprovedat;
         return $this;
@@ -266,7 +266,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @return \DateTime
      * @api
      */
-    public function gettxNlauthUserDeclinedat()
+    public function getTxNlauthUserDeclinedat()
     {
         return $this->txNlauthUserDeclinedat;
     }
@@ -276,7 +276,7 @@ class FrontendUser extends ExtbaseFrontendUser
      * @api
      * @return $this
      */
-    public function settxNlauthUserDeclinedat(\DateTime $txNlauthUserDeclinedat)
+    public function setTxNlauthUserDeclinedat(\DateTime $txNlauthUserDeclinedat)
     {
         $this->txNlauthUserDeclinedat = $txNlauthUserDeclinedat;
         return $this;

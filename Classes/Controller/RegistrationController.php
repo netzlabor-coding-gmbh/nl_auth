@@ -336,7 +336,7 @@ class RegistrationController extends AbstractController
             /* @var FrontendUser $user */
             $user = $this->frontendUserRepository->$findMethod($token['uid']);
 
-            $isFirst = !$user->gettxNlauthUserApprovedat();
+            $isFirst = !$user->getTxNlauthUserApprovedat();
             $decline = false;
 
             if ($uid !== null) {

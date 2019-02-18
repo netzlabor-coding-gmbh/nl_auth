@@ -19,7 +19,7 @@ class FrontendUserGroup extends ExtbaseFrontendUserGroup
      * @param int $txNlauthUserRedirectPid
      * @return FrontendUserGroup
      */
-    public function settxNlauthUserRedirectpid($txNlauthUserRedirectPid)
+    public function setTxNlauthUserRedirectpid($txNlauthUserRedirectPid)
     {
         $this->txNlauthUserRedirectpid = $txNlauthUserRedirectPid;
         return $this;
@@ -28,7 +28,7 @@ class FrontendUserGroup extends ExtbaseFrontendUserGroup
     /**
      * @return int
      */
-    public function gettxNlauthUserRedirectpid()
+    public function getTxNlauthUserRedirectpid()
     {
         return $this->txNlauthUserRedirectpid;
     }
