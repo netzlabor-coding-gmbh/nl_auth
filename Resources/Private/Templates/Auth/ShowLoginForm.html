@@ -29,6 +29,13 @@
                     placeholder: 'Enter your password',
                     additionalAttributes: {data-rsa-encryption: ''}
                   }"/>
+                <f:if condition="{settings.login.showPermaLogin}">
+                    <f:render partial="Form/Checkbox" arguments="{
+                        name: 'permalogin',
+                        value: '1',
+                        label: 'Remember Me'
+                    }" />
+                </f:if>
                 <f:render partial="Form/SubmitButton" arguments="{
                     label: 'Login'
                 }"/>

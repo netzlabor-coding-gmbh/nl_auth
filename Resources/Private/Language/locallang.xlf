@@ -27,7 +27,7 @@
             <trans-unit id="tx_nlauth_user.password_repeat_label">
                 <source>Repeat password</source>
             </trans-unit>
-            <trans-unit id="tx_nlauth_user.remember_label">
+            <trans-unit id="`">
                 <source>Remember Me</source>
             </trans-unit>
             <trans-unit id="tx_nlauth_user.login_submit">

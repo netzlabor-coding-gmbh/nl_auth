@@ -1,4 +1,6 @@
-<label class="m-checkbox m-checkbox--light">
-    <f:form.checkbox name="{name}" value="{value}" id="tx-nl-auth-user-{name}-checkbox" additionalAttributes="{additionalAttributes}" /> {label}
-    <span></span>
-</label>
+<div class="form-group">
+    <div class="form-check">
+        <f:form.checkbox name="{name}" value="{value}" id="tx-nl-auth-user-{name}-checkbox" class="form-check-input" additionalAttributes="{additionalAttributes}" />
+        <label class="form-check-label" for="tx-nl-auth-user-{name}-checkbox">{label}</label>
+    </div>
+</div>
