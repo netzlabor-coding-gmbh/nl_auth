@@ -4,6 +4,11 @@
 
 <f:section name="content">
     <f:security.ifAuthenticated>
+        <f:then>
+            <nl:logoutLink class="btn btn-primary">
+                Logout
+            </nl:logoutLink>
+        </f:then>
         <f:else>
             <nl:loginForm
                     userStoragePageUid="{storagePid}"
@@ -14,8 +19,8 @@
                     name: 'user',
                     type: 'text',
                     value: formData.user,
-                    label: 'Email',
-                    placeholder: 'name@mail.com'
+                    label: 'Username / Email',
+                    placeholder: 'Enter your username or email'
                   }"/>
                 <f:render partial="Form/PasswordWithForgot" arguments="{
                     name: 'pass',

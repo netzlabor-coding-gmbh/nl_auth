@@ -3,17 +3,14 @@
 <f:layout name="Default"/>
 
 <f:section name="content">
-    <nl:logoutForm
-            pageUid="{settings.login.page}"
-            method="post"
-            class="tx-nl-auth-user-logout-form form-inline">
+    <nl:logoutForm pageUid="{settings.login.page}" class="tx-nl-auth-user-logout-form">
         <f:render partial="Form/Static" arguments="{
             translationKey: 'tx_nlauth_user.logged_user',
             defaultLabel: 'Username:',
             value: user.username
         }"/>
         <f:render partial="Form/SubmitButton" arguments="{
-            label: 'Sign out'
+            label: 'Logout'
         }"/>
     </nl:logoutForm>
 </f:section>
