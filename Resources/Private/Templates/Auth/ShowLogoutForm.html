@@ -4,11 +4,7 @@
 
 <f:section name="content">
     <nl:logoutForm pageUid="{settings.login.page}" class="tx-nl-auth-user-logout-form">
-        <f:render partial="Form/Static" arguments="{
-            translationKey: 'tx_nlauth_user.logged_user',
-            defaultLabel: 'Username:',
-            value: user.username
-        }"/>
+        <p>Username: <nl:feUser property="username" /></p>
         <f:render partial="Form/SubmitButton" arguments="{
             label: 'Logout'
         }"/>
